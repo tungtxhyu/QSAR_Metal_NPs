@@ -97,5 +97,5 @@ Performance
 
 Save data and models for later use in web application:
 ```{r}
-save(RFmodel, file = "www/RFmodel.RData")
+save(RFmodel, file = "RFmodel.RData")
 ```
