@@ -16,7 +16,9 @@ knitr::opts_chunk$set(echo = TRUE)
 After installing R and RStudio, open RStudio and run the following codes to install and load necessary packages for developing models and making web applications::
 
 ```{r}
-packages <- c("svDialogs", "data.table", "data.table", "openxlsx", "mlbench", "caret", "tools", "DT", "magrittr", "ggplot2", "nortest", "tseries", "stringr", "RcmdrMisc", "lmtest", "dplyr", "randomForest", "shiny", "shinydashboard")
+packages <- c("svDialogs", "data.table", "data.table", "openxlsx", "mlbench", "caret", 
+              "tools", "DT", "magrittr", "ggplot2", "nortest", "tseries", "stringr", 
+              "RcmdrMisc", "lmtest", "dplyr", "randomForest", "shiny", "shinydashboard")
 
 install.packages(setdiff(packages, rownames(installed.packages())))
 
@@ -43,8 +45,9 @@ Choose excel file containing dataset and read the dataset:
 ```{r}
 DataMetal <- read.xlsx("MetalESN.xlsx", sheet = 1, startRow = 1, colNames = TRUE,
                        rowNames = FALSE, detectDates = FALSE, skipEmptyRows = TRUE,
-                       skipEmptyCols = TRUE, rows = NULL, cols = NULL, check.names = FALSE,
-                       namedRegion = NULL, na.strings = "NA", fillMergedCells = FALSE)
+                       skipEmptyCols = TRUE, rows = NULL, cols = NULL, 
+                       check.names = FALSE, namedRegion = NULL, 
+                       na.strings = "NA", fillMergedCells = FALSE)
 
 DataMetal <- select(DataMetal, c("Toxicity",
                                  "Dose",
